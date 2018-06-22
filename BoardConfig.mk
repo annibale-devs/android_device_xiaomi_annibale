@@ -5,6 +5,8 @@
 
 DEVICE_PATH := device/xiaomi/annibale
 
+BUILD_BROKEN_DUP_RULES := true
+
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
