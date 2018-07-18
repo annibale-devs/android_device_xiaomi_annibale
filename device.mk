@@ -162,6 +162,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
+    DialerResXiaomi \
     FrameworksResCommon \
     FrameworksResTarget \
     SecureElementResTarget \
