@@ -217,6 +217,7 @@ PRODUCT_PACKAGES += \
     FrameworksResCommon \
     FrameworksResTarget \
     LineageApertureOverlay \
+    LineageSDKOverlay \
     LineageSettingsOverlay \
     SecureElementResTarget \
     SettingsResCommon \
