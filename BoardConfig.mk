@@ -156,6 +156,9 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 # Platform
 TARGET_BOARD_PLATFORM := sun
 
+# Power
+TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
+
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/props/odm.prop
 TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/props/system_ext.prop
