@@ -255,3 +255,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the proprietary files
 include vendor/xiaomi/annibale/BoardConfigVendor.mk
+
+# Vendor MiuiCamera
+-include device/xiaomi/annibale-miuicamera/BoardConfig.mk

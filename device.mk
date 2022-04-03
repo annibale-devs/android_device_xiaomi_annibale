@@ -503,3 +503,6 @@ PRODUCT_COPY_FILES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/annibale/annibale-vendor.mk)
+
+# Vendor MiuiCamera
+$(call inherit-product-if-exists, device/xiaomi/annibale-miuicamera/device.mk)
