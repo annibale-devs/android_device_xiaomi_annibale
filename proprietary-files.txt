@@ -1,4 +1,4 @@
-# Unpinned blobs from annibale-user 16 BP2A.250605.031.A3 OS3.0.8.0.WPKMIXM release-keys
+# Unpinned blobs from annibale-user 16 BP2A.250605.031.A3 OS3.0.301.0.WPKMIXM release-keys
 
 # ACDB
 odm/etc/acdbdata/Mi/sia91xx/Mi_acdb_cal_sia.acdb
