@@ -781,3 +781,13 @@ service mi-factory_id-sh /vendor/odm/bin/init.mi.factory_id.sh
 
 on post-fs && property:ro.product.device=yupei
     start mi-factory_id-sh
+
+service vendor.sensors-hal-multihal /vendor/bin/hw/android.hardware.sensors-service.xiaomi-multihal
+    override
+    class hal
+    user system
+    group system wakelock context_hub input uhid
+    task_profiles ServiceCapacityLow
+    socket audio_us_socket_1 seqpacket 0666 system system
+    capabilities BLOCK_SUSPEND
+    rlimit rtprio 10 10
