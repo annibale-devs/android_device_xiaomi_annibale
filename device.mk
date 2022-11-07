@@ -167,6 +167,7 @@ PRODUCT_PACKAGES += \
     FrameworksResTarget \
     SecureElementResTarget \
     SettingsResCommon \
+    SettingsResXiaomi \
     SystemUIResCommon \
     TelecommResCommon \
     TelephonyResCommon \
