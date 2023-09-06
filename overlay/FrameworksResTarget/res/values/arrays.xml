@@ -6,9 +6,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Indicate available ColorDisplayController.COLOR_MODE_xxx. -->
     <integer-array name="config_availableColorModes">
-        <item>0</item>
-        <item>1</item>
-        <item>3</item>
+        <item>258</item> <!-- vivid -->
+        <item>256</item> <!-- saturated -->
+        <item>257</item> <!-- standard -->
+        <item>269</item> <!-- original -->
+        <item>268</item> <!-- p3 -->
+        <item>267</item> <!-- srgb -->
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the lux values
