@@ -217,6 +217,7 @@ PRODUCT_PACKAGES += \
     FrameworksResCommon \
     FrameworksResTarget \
     LineageApertureOverlay \
+    LineageSettingsOverlay \
     SecureElementResTarget \
     SettingsResCommon \
     SettingsResXiaomi \
