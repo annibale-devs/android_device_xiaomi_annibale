@@ -113,6 +113,11 @@ blob_fixups: blob_fixups_user_type = {
             'android.hardware.sensors-V3-ndk.so'
         ),
     (
+        'vendor/etc/media_codecs_sun.xml',
+        'vendor/etc/media_codecs_sun_vendor_without_dvenc.xml',
+    ): blob_fixup()
+        .regex_replace('.*media_codecs_(google_audio|google_telephony|google_video|vendor_audio).*\n', ''),
+    (
         'odm/lib64/camera/components/com.qti.node.dewarp.so',
         'odm/lib64/hw/com.qti.chi.override.so',
         'odm/lib64/libcamximageformatutils.so',
