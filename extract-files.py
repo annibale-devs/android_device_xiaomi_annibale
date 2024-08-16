@@ -35,6 +35,16 @@ namespace_imports = [
     'vendor/qcom/opensource/dataservices',
 ]
 
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'vendor' else None
+
+lib_fixups: lib_fixups_user_type = {
+    **lib_fixups,
+    (
+        'vendor.qti.diaghal@1.0',
+    ): lib_fixup_vendor_suffix,
+}
+
 blob_fixups: blob_fixups_user_type = {
     (
         'odm/etc/camera/enhance_motiontuning.xml',
@@ -54,6 +64,7 @@ module = ExtractUtilsModule(
     'annibale',
     'xiaomi',
     blob_fixups=blob_fixups,
+    lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
 )
 
