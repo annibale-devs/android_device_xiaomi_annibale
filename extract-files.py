@@ -35,9 +35,25 @@ namespace_imports = [
     'vendor/qcom/opensource/dataservices',
 ]
 
+blob_fixups: blob_fixups_user_type = {
+    (
+        'odm/etc/camera/enhance_motiontuning.xml',
+        'odm/etc/camera/motiontuning.xml',
+        'odm/etc/camera/snsc_bokeh_motiontuning.xml',
+        'odm/etc/camera/snsc_enhance_motiontuning.xml',
+        'odm/etc/camera/snsc_motiontuning.xml',
+        'odm/etc/camera/snsc_noface_motiontuning.xml'
+    ): blob_fixup()
+        .regex_replace(
+            'xml=version',
+            'xml version'
+        ),
+}  # fmt: skip
+
 module = ExtractUtilsModule(
     'annibale',
     'xiaomi',
+    blob_fixups=blob_fixups,
     namespace_imports=namespace_imports,
 )
 
