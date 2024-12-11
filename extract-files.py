@@ -52,6 +52,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'system_ext/lib64/libwfdnative.so': blob_fixup()
+        .add_needed('libbinder_shim.so'),
     (
         'odm/etc/camera/enhance_motiontuning.xml',
         'odm/etc/camera/motiontuning.xml',
