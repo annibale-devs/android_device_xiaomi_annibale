@@ -289,6 +289,33 @@ blob_fixups: blob_fixups_user_type = {
             'libwfdhdcpservice_proprietary.so',
             'libwfdhdcpservice_annibale.so'
         ),
+    'vendor/lib64/hw/libaudiocorehal.qti.so': blob_fixup()
+        .replace_needed(
+            'android.hardware.audio.core.sounddose-V1-ndk.so',
+            'android.hardware.audio.core.sounddose-V2-ndk.so'
+        )
+        .replace_needed(
+            'libaudio_aidl_conversion_common_ndk.so',
+            'libaudio_aidl_conversion_common_ndk_prebuilt.so'
+        ),
+    'vendor/lib64/libaudioserviceexampleimpl.so': blob_fixup()
+        .replace_needed(
+            'android.hardware.bluetooth.audio-impl.so',
+            'android.hardware.bluetooth.audio-impl_prebuilt.so'
+        )
+        .replace_needed(
+            'libbluetooth_audio_session_aidl.so',
+            'libbluetooth_audio_session_aidl_prebuilt.so'
+        )
+        .replace_needed(
+            'libaudio_aidl_conversion_common_ndk.so',
+            'libaudio_aidl_conversion_common_ndk_prebuilt.so'
+        ),
+    'vendor/lib64/android.hardware.bluetooth.audio-impl_prebuilt.so': blob_fixup()
+        .replace_needed(
+            'libbluetooth_audio_session_aidl.so',
+            'libbluetooth_audio_session_aidl_prebuilt.so'
+        ),
     (
         'vendor/lib64/libcapiv2uvvendor.so',
         'vendor/lib64/liblistensoundmodel2vendor.so',
