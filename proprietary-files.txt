@@ -2426,7 +2426,6 @@ vendor/lib64/libvideoutils.so
 
 # Configstore
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore-service
-vendor/etc/configstore/wigig.xml
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore-service.rc
 vendor/etc/vintf/manifest/vendor.qti.hardware.capabilityconfigstore-service.xml
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore-impl.so
@@ -4275,7 +4274,6 @@ vendor/etc/init/init.vendor.wlan.rc
 vendor/etc/init/libxiaomi_qcril.rc
 vendor/etc/init/vendor.mbnota.rc
 vendor/lib64/libcert_parse.wpa_s.so
-vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
 
 # WiFi Display
 system/framework/WfdCommon.jar;BOOT_JAR
