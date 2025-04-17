@@ -126,6 +126,7 @@ PRODUCT_PACKAGES += \
 
 # Euicc
 PRODUCT_PACKAGES += \
+    XiaomiEsimSwitcher \
     XiaomiEuicc
 
 PRODUCT_COPY_FILES += \
