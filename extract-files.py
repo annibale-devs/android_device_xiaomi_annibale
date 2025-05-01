@@ -151,6 +151,22 @@ blob_fixups: blob_fixups_user_type = {
             'android.hardware.audio.core.sounddose-V2-ndk.so'
         ),
     (
+        'odm/lib64/libAncHumanPreviewBokeh.so',
+        'odm/lib64/libMiEmojiEffect.so',
+        'odm/lib64/libMiPhotoFilter.so',
+        'odm/lib64/libMiVideoFilter.so',
+        'odm/lib64/libTrueSight.so',
+        'odm/lib64/libarcsoft_beautyshot.so',
+        'odm/lib64/libwa_widelens_undistort.so'
+    ): blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_lockPlanes')
+        .clear_symbol_version('AHardwareBuffer_release')
+        .clear_symbol_version('AHardwareBuffer_unlock')
+        .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_isSupported'),
+    (
         'vendor/bin/wfdhdcphalservice',
         'vendor/bin/wfdvndservice'
     ): blob_fixup()
