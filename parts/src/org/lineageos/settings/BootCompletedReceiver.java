@@ -24,8 +24,10 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.ContentObserver;
 import android.hardware.display.DisplayManager;
+import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.util.Log;
@@ -39,6 +41,11 @@ import org.lineageos.settings.refreshrate.RefreshUtils;
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final boolean DEBUG = false;
     private static final String TAG = "XiaomiParts";
+    private static final int Touch_Fod_Enable     = 10;
+    private static final int Touch_Aod_Enable     = 11;
+    private static final int Touch_FodIcon_Enable = 16;
+
+    private ITouchFeature xiaomiTouchFeatureAidl;
 
     @Override
     public void onReceive(final Context context, Intent intent) {
@@ -62,6 +69,14 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             // Override HDR types
             overrideHdrTypes(context);
 
+            // force-enable SoFOD on lock screen
+            initTouchFeatureService();
+            if (xiaomiTouchFeatureAidl != null) {
+                xiaomiTouchFeatureAidl.setTouchMode(0, Touch_Fod_Enable, 1);
+                xiaomiTouchFeatureAidl.setTouchMode(0, Touch_Aod_Enable, 1);
+                xiaomiTouchFeatureAidl.setTouchMode(0, Touch_FodIcon_Enable, 1);
+                if (DEBUG) Log.i(TAG, "SoFOD features enabled on lock screen");
+            }
         } catch (Exception e) {
             Log.e(TAG, "Error during locked boot completed processing", e);
         }
@@ -102,5 +117,18 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         }
     }
 
+    private void initTouchFeatureService() {
+        if (xiaomiTouchFeatureAidl != null) return;
+        try {
+            String name = "default";
+            String fqName = ITouchFeature.DESCRIPTOR + "/" + name;
+            IBinder binder = Binder.allowBlocking(
+                    ServiceManager.waitForDeclaredService(fqName)
+            );
+            xiaomiTouchFeatureAidl = ITouchFeature.Stub.asInterface(binder);
+            if (DEBUG) Log.i(TAG, "TouchFeature service connected");
+        } catch (Exception e) {
+            Log.e(TAG, "Failed to connect to TouchFeature service", e);
+        }
+    }
 }
-
