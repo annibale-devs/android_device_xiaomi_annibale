@@ -34,20 +34,15 @@ import android.util.Log;
 import android.view.Display;
 import android.view.Display.HdrCapabilities;
 
-import vendor.xiaomi.hw.touchfeature.ITouchFeature;
-
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.display.ColorModeService;
 import org.lineageos.settings.refreshrate.RefreshUtils;
+import org.lineageos.settings.touch.DoubleTapService;
+import org.lineageos.settings.touch.SoFodTouchService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
-    private static final boolean DEBUG = false;
     private static final String TAG = "XiaomiParts";
-    private static final int Touch_Fod_Enable     = 10;
-    private static final int Touch_Aod_Enable     = 11;
-    private static final int Touch_FodIcon_Enable = 16;
-
-    private ITouchFeature xiaomiTouchFeatureAidl;
+    private static final boolean DEBUG = true;
 
     @Override
     public void onReceive(final Context context, Intent intent) {
@@ -71,16 +66,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             // Override HDR types
             overrideHdrTypes(context);
 
-            // force-enable SoFOD on lock screen
-            initTouchFeatureService();
-            if (xiaomiTouchFeatureAidl != null) {
-                xiaomiTouchFeatureAidl.setTouchMode(0, Touch_Fod_Enable, 1);
-                xiaomiTouchFeatureAidl.setTouchMode(0, Touch_Aod_Enable, 1);
-                xiaomiTouchFeatureAidl.setTouchMode(0, Touch_FodIcon_Enable, 1);
-                if (DEBUG) Log.i(TAG, "SoFOD features enabled on lock screen");
-            }
         } catch (Exception e) {
-            Log.e(TAG, "Error during locked boot completed processing", e);
+            Log.e(TAG, "Error during locked boot completed", e);
         }
     }
 
@@ -100,6 +87,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Start Refresh Rate Service
         RefreshUtils.startService(context);
+
+        // Start Touchfeatures service
+        context.startServiceAsUser(new Intent(context, DoubleTapService.class), UserHandle.CURRENT);
+        context.startServiceAsUser(new Intent(context, SoFodTouchService.class), UserHandle.CURRENT);
     }
 
     private void overrideHdrTypes(Context context) {
@@ -116,21 +107,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             }
         } catch (Exception e) {
             Log.e(TAG, "Error overriding HDR types", e);
-        }
-    }
-
-    private void initTouchFeatureService() {
-        if (xiaomiTouchFeatureAidl != null) return;
-        try {
-            String name = "default";
-            String fqName = ITouchFeature.DESCRIPTOR + "/" + name;
-            IBinder binder = Binder.allowBlocking(
-                    ServiceManager.waitForDeclaredService(fqName)
-            );
-            xiaomiTouchFeatureAidl = ITouchFeature.Stub.asInterface(binder);
-            if (DEBUG) Log.i(TAG, "TouchFeature service connected");
-        } catch (Exception e) {
-            Log.e(TAG, "Failed to connect to TouchFeature service", e);
         }
     }
 }
