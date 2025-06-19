@@ -54,7 +54,8 @@ PRODUCT_PACKAGES += \
     audio.usb.default
 
 PRODUCT_PACKAGES += \
-    audioadsprpcd
+    audioadsprpcd \
+    qtiaudiohalvendorextn
 
 PRODUCT_PACKAGES += \
     android.hardware.audio.core.sounddose-V1-ndk.vendor \
