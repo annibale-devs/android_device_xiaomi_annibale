@@ -151,6 +151,8 @@ vendor.wv.oemcrypto.debug.enable_external_display_check=false
 vendor.wv.oemcrypto.debug.enable_hlos_data_path=true
 
 # Fingerprint
+persist.vendor.fingerprint.type=udfps
+persist.vendor.fingerprint.sensor_location=580|1910|148
 persist.vendor.qfp=true
 
 # Fuse
