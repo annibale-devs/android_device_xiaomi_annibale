@@ -26,6 +26,12 @@ from extract_utils.utils import (
     run_cmd,
 )
 
+namespace_imports = [
+    'hardware/qcom-caf/sm8750',
+    'vendor/qcom/opensource/commonsys/display',
+    'vendor/qcom/opensource/commonsys-intf/display',
+]
+
 module = ExtractUtilsModule(
     'annibale',
     'xiaomi',
