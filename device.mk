@@ -232,6 +232,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Power
+$(call soong_config_set,qtipower,mode_ext_lib,//$(LOCAL_PATH):libpowermode-ext-annibale)
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
