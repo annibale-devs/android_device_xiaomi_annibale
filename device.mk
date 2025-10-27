@@ -216,6 +216,7 @@ PRODUCT_PACKAGES += \
     DialerResXiaomi \
     FrameworksResCommon \
     FrameworksResTarget \
+    LineageApertureOverlay \
     SecureElementResTarget \
     SettingsResCommon \
     SettingsResXiaomi \
