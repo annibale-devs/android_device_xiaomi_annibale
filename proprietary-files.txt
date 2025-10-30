@@ -3939,7 +3939,6 @@ odm/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl
 odm/etc/init/vendor.xiaomi.sensor.citsensorservice.aidl.rc
 odm/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice.aidl.xml
 vendor/lib64/vendor.xiaomi.sensor.citsensorservice-V1-ndk.so
-vendor/lib64/xiaomi.system.hypsys.common-V1-ndk.so
 
 # Sensors
 odm/etc/init/init.boled.lightsensor.rc

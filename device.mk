@@ -154,6 +154,10 @@ PRODUCT_PACKAGES += \
     hwservicemanager \
     android.hidl.allocator@1.0-service
 
+# Hypsy
+PRODUCT_PACKAGES += \
+    xiaomi.system.hypsys.common-service
+
 # IFAAService
 PRODUCT_PACKAGES += \
     IFAAService
