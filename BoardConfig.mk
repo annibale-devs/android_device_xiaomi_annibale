@@ -62,6 +62,35 @@ BOARD_BOOTCONFIG := \
 BOARD_BOOTCONFIG += \
     androidboot.selinux=permissive
 
+# Kernel prebuilt
+PREBUILT_PATH := device/xiaomi/annibale-kernel
+TARGET_NO_KERNEL_OVERRIDE := true
+TARGET_KERNEL_SOURCE := $(PREBUILT_PATH)/kernel-headers
+BOARD_PREBUILT_DTBIMAGE_DIR := $(PREBUILT_PATH)/images/dtbs/
+BOARD_PREBUILT_DTBOIMAGE := $(PREBUILT_PATH)/images/dtbo.img
+PRODUCT_COPY_FILES += \
+	$(PREBUILT_PATH)/images/kernel:kernel
+
+# Kernel modules
+GKI_VERSION := 6.6.77-android15-8-g4a507830d890-ab13636293-4k
+DLKM_MODULES_PATH := $(PREBUILT_PATH)/modules/vendor_dlkm
+RAMDISK_MODULES_PATH := $(PREBUILT_PATH)/modules/vendor_boot
+SYSTEM_DLKM_MODULES_PATH := $(PREBUILT_PATH)/modules/system_dlkm/$(GKI_VERSION)
+SYSTEM_DLKM_FLATTEN_MODULES_PATH := $(PREBUILT_PATH)/modules/system_dlkm/flatten/lib/modules
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(SYSTEM_DLKM_MODULES_PATH)/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/lib/modules/$(GKI_VERSION)/) \
+    $(call find-copy-subdir-files,*,$(SYSTEM_DLKM_FLATTEN_MODULES_PATH)/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/flatten/lib/modules/)
+
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DLKM_MODULES_PATH)/*.ko)
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(patsubst %,$(DLKM_MODULES_PATH)/%,$(shell cat $(DLKM_MODULES_PATH)/modules.load))
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DLKM_MODULES_PATH)/modules.blocklist
+
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(RAMDISK_MODULES_PATH)/*.ko)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(patsubst %,$(RAMDISK_MODULES_PATH)/%,$(shell cat $(RAMDISK_MODULES_PATH)/modules.load))
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD  := $(patsubst %,$(RAMDISK_MODULES_PATH)/%,$(shell cat $(RAMDISK_MODULES_PATH)/modules.load.recovery))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(RAMDISK_MODULES_PATH)/modules.blocklist
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
