@@ -45,7 +45,27 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    fstab.qcom
+    init.class_main.sh \
+    init.kernel.init_boot-memory.sh \
+    init.kernel.post_boot-memory.sh \
+    init.kernel.post_boot-sun.sh \
+    init.kernel.post_boot-sun_default_6_2.sh \
+    init.kernel.post_boot.sh \
+    init.qcom.class_core.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sh
+
+PRODUCT_PACKAGES += \
+    charger_fw_fstab.qti \
+    fstab.qcom \
+    fw_dir.ueventd.qcom.rc \
+    init.qcom.factory.rc \
+    init.qcom.rc \
+    init.recovery.qcom.rc \
+    init.target.rc \
+    ueventd-odm.rc \
+    ueventd.qcom.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
