@@ -27,6 +27,10 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     update_verifier
 
+# API levels
+BOARD_SHIPPING_API_LEVEL := 202404
+PRODUCT_SHIPPING_API_LEVEL := 36
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
