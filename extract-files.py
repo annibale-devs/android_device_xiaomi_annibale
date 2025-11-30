@@ -172,6 +172,14 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lock')
         .clear_symbol_version('AHardwareBuffer_isSupported'),
     (
+        'odm/lib64/hw/fingerprint.qcom_us.default.so',
+        'odm/lib64/libqc_hal.so'
+    ): blob_fixup()
+        .replace_needed(
+            'android.hardware.biometrics.fingerprint-V5-ndk.so',
+            'android.hardware.biometrics.fingerprint-V4-ndk.so'
+        ),
+    (
         'vendor/bin/wfdhdcphalservice',
         'vendor/bin/wfdvndservice'
     ): blob_fixup()
