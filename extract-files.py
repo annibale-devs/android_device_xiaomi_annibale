@@ -64,6 +64,14 @@ blob_fixups: blob_fixups_user_type = {
             'xml=version',
             'xml version'
         ),
+    (
+        'vendor/bin/wfdhdcphalservice',
+        'vendor/bin/wfdvndservice'
+    ): blob_fixup()
+        .replace_needed(
+            'libwfdhdcpservice_proprietary.so',
+            'libwfdhdcpservice_annibale.so'
+        ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
