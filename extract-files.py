@@ -65,6 +65,28 @@ blob_fixups: blob_fixups_user_type = {
             'xml version'
         ),
     (
+        'odm/bin/hw/vendor.xiaomi.hw.touchfeature-service',
+        'odm/lib64/hw/displayfeature.default.so',
+        'odm/lib64/libadaptivehdr.so',
+        'odm/lib64/libcolortempmode.so',
+        'odm/lib64/libdither.so',
+        'odm/lib64/libflatmode.so',
+        'odm/lib64/libhistprocess.so',
+        'odm/lib64/libmiBrightness.so',
+        'odm/lib64/libmiSensorCtrl.so',
+        'odm/lib64/libpaperMode.so',
+        'odm/lib64/librhytheyecare.so',
+        'odm/lib64/libsdr2hdr.so',
+        'odm/lib64/libsre.so',
+        'odm/lib64/libtruetone.so',
+        'odm/lib64/libvideomode.so',
+        'vendor/lib64/libgnss.so'
+    ): blob_fixup()
+        .replace_needed(
+            'android.hardware.sensors-V2-ndk.so',
+            'android.hardware.sensors-V3-ndk.so',
+        ),
+    (
         'odm/bin/hw/android.hardware.security.keymint-service.strongbox-nxp',
         'odm/lib64/libjc_keymint-nxp.so',
         'odm/lib64/libjc_keymint_transport_nxp.so',
@@ -81,6 +103,51 @@ blob_fixups: blob_fixups_user_type = {
             'libcppbor_external.so',
             'libcppbor_annibale.so'
         ),
+    'odm/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl': blob_fixup()
+        .replace_needed(
+            'android.hardware.graphics.common-V5-ndk.so',
+            'android.hardware.graphics.common-V6-ndk.so'
+        )
+        .replace_needed(
+            'android.hardware.sensors-V2-ndk.so',
+            'android.hardware.sensors-V3-ndk.so'
+        ),
+    (
+        'odm/lib64/camera/components/com.qti.node.dewarp.so',
+        'odm/lib64/hw/com.qti.chi.override.so',
+        'odm/lib64/libcamximageformatutils.so',
+        'odm/lib64/libchifeature2.so',
+        'odm/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so',
+        'vendor/lib64/libqvrservice.so'
+    ): blob_fixup()
+        .replace_needed(
+            'android.hardware.graphics.allocator-V1-ndk.so',
+            'android.hardware.graphics.allocator-V2-ndk.so'
+        ),
+    'odm/lib64/hw/camera.qcom.so': blob_fixup()
+        .replace_needed(
+            'android.hardware.sensors-V2-ndk.so',
+            'android.hardware.sensors-V3-ndk.so'
+        ),
+    'vendor/lib64/libcamera2ndk_vendor.so': blob_fixup()
+        .replace_needed(
+            'android.frameworks.cameraservice.device-V2-ndk',
+            'android.frameworks.cameraservice.device-V3-ndk'
+        )
+        .replace_needed(
+            'android.frameworks.cameraservice.service-V2-ndk',
+            'android.frameworks.cameraservice.service-V3-ndk'
+        ),
+    'vendor/lib64/camera.device-external-impl.so': blob_fixup()
+        .replace_needed(
+            'android.hardware.graphics.common-V5-ndk',
+            'android.hardware.graphics.common-V6-ndk'
+        ),
+    'vendor/lib64/hw/libaudiocorehal.qti.so': blob_fixup()
+        .replace_needed(
+            'android.hardware.audio.core.sounddose-V1-ndk.so',
+            'android.hardware.audio.core.sounddose-V2-ndk.so'
+        ),
     (
         'vendor/bin/wfdhdcphalservice',
         'vendor/bin/wfdvndservice'
@@ -88,6 +155,16 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libwfdhdcpservice_proprietary.so',
             'libwfdhdcpservice_annibale.so'
+        ),
+    'vendor/lib64/libqcodec2_core.so': blob_fixup()
+        .replace_needed(
+            'android.hardware.graphics.common-V5-ndk.so',
+            'android.hardware.graphics.common-V6-ndk.so'
+        ),
+    'vendor/lib64/libwfdmmsrc_proprietary.so': blob_fixup()
+        .replace_needed(
+            'android.media.audio.common.types-V2-ndk.so',
+            'android.media.audio.common.types-V3-ndk.so'
         ),
 }  # fmt: skip
 
