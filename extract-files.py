@@ -143,6 +143,8 @@ blob_fixups: blob_fixups_user_type = {
             'android.hardware.graphics.common-V5-ndk',
             'android.hardware.graphics.common-V6-ndk'
         ),
+    'vendor/lib64/libcameraopt.so': blob_fixup()
+        .add_needed('libprocessgroup_shim.so'),
     'vendor/lib64/hw/libaudiocorehal.qti.so': blob_fixup()
         .replace_needed(
             'android.hardware.audio.core.sounddose-V1-ndk.so',
