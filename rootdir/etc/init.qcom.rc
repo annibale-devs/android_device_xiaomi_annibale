@@ -490,10 +490,6 @@ on property:persist.vendor.qcomsysd.enabled=1 && property:ro.build.type=eng
 on property:persist.vendor.qcomsysd.enabled=0
     stop qcomsysd
 
-service vendor.ssr_setup /vendor/bin/ssr_setup
-    oneshot
-    disabled
-
 service vendor.ss_ramdump /vendor/bin/subsystem_ramdump 3
     class main
     user system
@@ -525,9 +521,6 @@ on property:persist.sys.modem_auth_timeout=*
 
 on property:persist.sys.pil_proxy_timeout=*
     write /sys/module/peripheral_loader/parameters/proxy_timeout_ms ${persist.sys.pil_proxy_timeout}
-
-on property:persist.vendor.ssr.restart_level=*
-    start vendor.ssr_setup
 
 on property:persist.vendor.ssr.enable_ramdumps=1
     write /sys/module/subsystem_restart/parameters/enable_ramdumps 1
@@ -694,12 +687,6 @@ service qti-testscripts /system/bin/sh /product/etc/init.qcom.testscripts.sh
     oneshot
     seclabel u:r:qti-testscripts:s0
 
-service wifi-sdio-on /vendor/bin/init.qcom.sdio.sh
-    class late_start
-    group wifi inet
-    disabled
-    oneshot
-
 service wifi-crda /vendor/bin/init.crda.sh
    class late_start
    user root
@@ -796,15 +783,6 @@ service diag_mdlog_stop /vendor/bin/diag_mdlog -k
     disabled
     oneshot
 
-service qlogd /system/xbin/qlogd
-    socket qlogd stream 0662 system system
-    class main
-    disabled
-on property:persist.sys.qlogd=1
-    start qlogd
-on property:persist.sys.qlogd=0
-    stop qlogd
-
 service vm_bms /vendor/bin/vm_bms
     user root
     group root
@@ -883,12 +861,6 @@ on property:vendor.rild.libpath=*
 on property:ro.vendor.radio.noril=*
     setprop ro.radio.noril ${ro.vendor.radio.noril}
 
-service vendor.power_off_alarm /vendor/bin/power_off_alarm
-    class core
-    group system
-    disabled
-    oneshot
-
 service vendor.hbtp /vendor/bin/hbtp_daemon
      class main
      user system
@@ -905,12 +877,6 @@ service chre /vendor/bin/chre
 
 on property:vendor.chre.enabled=0
    stop chre
-
-service bugreport /system/bin/dumpstate -d -p -B -z -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
-    class main
-    disabled
-    oneshot
-    keycodes 114 115 116
 
 #Set GPU Opengles version
 on property:vendor.opengles.version=*
