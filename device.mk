@@ -61,6 +61,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio.core.sounddose-V1-ndk.vendor \
     libalsautilsv2.vendor \
+    libaudioutils_shim \
     libaudio_aidl_conversion_common_ndk.vendor \
     libmediautils_vendor.vendor \
     libtinyalsav2.vendor
