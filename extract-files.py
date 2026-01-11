@@ -272,6 +272,16 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .regex_replace('seclabel.*?s0', ''),
     (
+        'odm/bin/hw/vendor.qti.camera.provider-service_64',
+        'vendor/bin/hw/vendor.qti.hardware.display.composer-service',
+        'vendor/bin/poweropt-service',
+        'vendor/lib64/hw/libaudioeffecthal.qti.so',
+    ): blob_fixup()
+        .replace_needed(
+            'libtinyxml2.so',
+            'libtinyxml2-v34.so'
+        ),
+    (
         'vendor/bin/wfdhdcphalservice',
         'vendor/bin/wfdvndservice'
     ): blob_fixup()
