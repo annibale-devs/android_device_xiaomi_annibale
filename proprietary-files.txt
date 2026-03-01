@@ -3929,7 +3929,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.ims.rcssipaidlservice-V1-ndk.so
 vendor/lib64/vendor.qti.ims.rcsuceaidlservice-V1-ndk.so
-vendor/lib64/vendor.qti.ims.uceaidlservice-V1-ndk.so
+vendor/lib64/vendor.qti.ims.uceaidlservice-V1-ndk.so;MODULE_SUFFIX=_vendor
 
 # Secure element
 vendor/bin/hw/android.hardware.secure_element-service.qti

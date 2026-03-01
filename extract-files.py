@@ -43,6 +43,7 @@ lib_fixups: lib_fixups_user_type = {
     (
         'vendor.qti.diaghal-V1-ndk',
         'vendor.qti.diaghal@1.0',
+        'vendor.qti.ims.uceaidlservice-V1-ndk',
         'vendor.qti.ImsRtpService-V1-ndk',
     ): lib_fixup_vendor_suffix,
 }
