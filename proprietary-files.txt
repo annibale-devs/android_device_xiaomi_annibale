@@ -3959,9 +3959,7 @@ vendor/etc/sensors/sns_odp_config
 vendor/etc/sensors/sns_reg_config
 vendor/etc/vintf/manifest/vendor.qti.hardware.sensorscalibrate.xml
 vendor/etc/sensor_diag.cfg
-vendor/lib64/hw/sensors.dynamic_sensor_hal.so
 vendor/lib64/libSensorsInterface.so
-vendor/lib64/libhidparser.so
 vendor/lib64/libqsh.so
 vendor/lib64/libqsh_ble_pb.so
 vendor/lib64/libsensor_calibration.so
