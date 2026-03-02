@@ -3104,6 +3104,13 @@ vendor/etc/init/hw/init.qti.kernel.rc
 vendor/etc/init/hw/init.qti.kernel.target.rc
 vendor/etc/init/hw/init.qti.ufs.rc
 
+# Keymint (Xiaomi)
+odm/bin/hw/vendor.xiaomi.hardware.authsecretd
+odm/etc/init/vendor.xiaomi.hardware.authsecretd.rc
+odm/etc/vintf/manifest/vendor.xiaomi.hardware.authsecretd.xml
+odm/lib64/libmi_authsecretd.so
+odm/lib64/vendor.xiaomi.hardware.miauthsecretd-V1-ndk.so
+
 # Keymint
 odm/bin/hw/android.hardware.authsecret-service.nxp-qti
 odm/bin/hw/android.hardware.security.keymint-service.strongbox-nxp
@@ -3125,7 +3132,6 @@ odm/lib64/libkeymint_empty-thales.so
 odm/lib64/libkeymint_transport_empty-nxp.so
 odm/lib64/libweaver_empty-nxp.so
 odm/lib64/libweaver_empty-thales.so
-odm/lib64/vendor.xiaomi.hardware.miauthsecretd-V1-ndk.so
 vendor/bin/hw/android.hardware.security.keymint-service-qti
 vendor/etc/init/android.hardware.security.keymint-service-qti.rc
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
