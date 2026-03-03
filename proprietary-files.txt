@@ -127,7 +127,7 @@ odm/etc/init/init.tfa.rc
 odm/lib64/libaudioroute_ext.so
 odm/lib64/libcrussp.so
 odm/lib64/libfcsam.so
-odm/lib64/libmiam.so
+odm/lib64/libmiam.so;FIX_SONAME
 odm/lib64/libsiaalgocal.so
 odm/lib64/libtfacal.so
 odm/lib64/libwindns.so
@@ -817,7 +817,7 @@ odm/lib64/libPlatformValidatorShared.so
 odm/lib64/libSNPE.so;SYMLINK=vendor/lib64/libSNPE.so
 odm/lib64/libSnpeHta.so
 odm/lib64/libSnpeHtpPrepare.so
-odm/lib64/libSnpeHtpV79CalculatorStub.so
+odm/lib64/libSnpeHtpV79CalculatorStub.so;FIX_SONAME
 odm/lib64/libSnpeHtpV79Stub.so
 odm/lib64/libaachaptics.so
 odm/lib64/libaidenoiser.so
@@ -850,7 +850,7 @@ odm/lib64/libauto_focus_stark.so
 odm/lib64/libbitmlengine.so
 odm/lib64/libbitmlenginev2.so
 odm/lib64/libc++_shared.so
-odm/lib64/libcalculator.so
+odm/lib64/libcalculator.so;FIX_SONAME
 odm/lib64/libcamera_scene.so
 odm/lib64/libcameraheif.so
 odm/lib64/libcamlog.so
@@ -902,7 +902,7 @@ odm/lib64/libhandgesture.arcsoft.so
 odm/lib64/libhdr10plus.so
 odm/lib64/libheichal.so
 odm/lib64/libhme.so
-odm/lib64/libhta_hexagon_runtime_snpe.so
+odm/lib64/libhta_hexagon_runtime_snpe.so;FIX_SONAME
 odm/lib64/libhwliqinterface2.so
 odm/lib64/libhwlispcffdump.so
 odm/lib64/libiccprofile.so
@@ -991,7 +991,7 @@ odm/lib64/libswregistrationalgo.so
 odm/lib64/libtfestriping.so
 odm/lib64/libubifocus.so
 odm/lib64/libvega_common.so
-odm/lib64/libvega_common_ecd.so
+odm/lib64/libvega_common_ecd.so;FIX_SONAME
 odm/lib64/libvideoml.so
 odm/lib64/libwa_widelens_undistort.so
 odm/lib64/libxmi_slow_motion_mein.so
@@ -3402,7 +3402,7 @@ vendor/lib64/libprekill.so
 vendor/lib64/libprocomp.so
 vendor/lib64/libpsmoptfeature.so
 vendor/lib64/libq-perflog.so
-vendor/lib64/libqapesdk.so
+vendor/lib64/libqapesdk.so;DISABLE_DEPS
 vendor/lib64/libqti-appclassifier.so
 vendor/lib64/libqti-lllite.so
 vendor/lib64/libqti-perfd-client.so
@@ -4197,7 +4197,7 @@ odm/firmware/smooth.tflite
 odm/firmware/water_check.tflite
 odm/lib64/libtensorflowlite_touch_c.so
 odm/lib64/libtouchreport.so
-odm/lib64/libtouchreport_alg_2.so
+odm/lib64/libtouchreport_alg_2.so;FIX_SONAME
 odm/lib64/libtouchreport_alg_goodix.so
 odm/lib64/libtouchreport_hal.so
 odm/lib64/libtouchreport_sensor.so
