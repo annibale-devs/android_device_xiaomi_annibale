@@ -298,10 +298,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.qspa-service \
     qspa_vendor.rc
 
-# QTI
-PRODUCT_PACKAGES += \
-    libvndfwk_detect_jni.qti_vendor
-
 # Rootdir
 PRODUCT_PACKAGES += \
     init.class_main.sh \
