@@ -208,11 +208,6 @@ blob_fixups: blob_fixups_user_type = {
         ),
     'vendor/lib64/libcameraopt.so': blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
-    'vendor/lib64/hw/libaudiocorehal.qti.so': blob_fixup()
-        .replace_needed(
-            'android.hardware.audio.core.sounddose-V1-ndk.so',
-            'android.hardware.audio.core.sounddose-V2-ndk.so'
-        ),
     (
         'odm/lib64/libAncHumanPreviewBokeh.so',
         'odm/lib64/libMiEmojiEffect.so',

@@ -49,8 +49,12 @@ PRODUCT_SHIPPING_API_LEVEL := 36
 # Audio
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
+    audio.primary.default \
     audio.r_submix.default \
     audio.usb.default
+
+PRODUCT_PACKAGES += \
+    audioadsprpcd
 
 PRODUCT_PACKAGES += \
     android.hardware.audio.core.sounddose-V1-ndk.vendor \

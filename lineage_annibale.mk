@@ -13,6 +13,9 @@ $(call inherit-product, device/xiaomi/annibale/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Lineage stuff
+TARGET_EXCLUDES_AUDIOFX := true
+
 PRODUCT_NAME := lineage_annibale
 PRODUCT_DEVICE := annibale
 PRODUCT_BRAND := POCO
