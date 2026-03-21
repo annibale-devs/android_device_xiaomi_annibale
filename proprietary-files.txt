@@ -215,7 +215,6 @@ odm/etc/audio/sku_sun/mixer_paths_overlay_static.xml
 odm/etc/audio/sku_sun/mixer_paths_sun_mtp.xml
 odm/etc/audio/sku_sun/resourcemanager_sun_mtp.xml
 odm/etc/audio/audio_effects_config.json
-odm/etc/audio/audio_module_config_primary.xml
 odm/etc/backend_conf.xml
 odm/etc/backend_conf_sia.xml
 odm/etc/sixth_wrapper_cfg.xml
@@ -225,16 +224,12 @@ vendor/etc/audio/sku_sun/audio_effects.conf
 vendor/etc/audio/sku_sun/audio_effects.xml
 vendor/etc/audio/sku_sun/audio_effects_config.xml
 vendor/etc/audio/sku_sun/audio_effects_config_stub.xml
-vendor/etc/audio/sku_sun/audio_policy_configuration.xml
 vendor/etc/audio/sku_sun/mixer_paths_sun_mtp.xml
 vendor/etc/audio/sku_sun/quasar_config.xml
 vendor/etc/audio/sku_sun/resourcemanager_sun_mtp.xml
-vendor/etc/audio/sku_sun_qssi/audio_policy_configuration.xml
-vendor/etc/audio/audio_module_config_primary.xml
 vendor/etc/audio/vendor_audio_interfaces.xml
 vendor/etc/Hapticsconfig.xml
 vendor/etc/audio_diag.cfg
-vendor/etc/audio_policy_configuration.xml
 vendor/etc/audio_policy_volumes.xml
 vendor/etc/card-defs.xml
 vendor/etc/default_volume_tables.xml
