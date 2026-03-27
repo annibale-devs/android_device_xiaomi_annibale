@@ -158,6 +158,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     xiaomi.system.hypsys.common-service
 
+# HWUI
+TARGET_USES_VULKAN := true
+
 # IFAAService
 PRODUCT_PACKAGES += \
     IFAAService
