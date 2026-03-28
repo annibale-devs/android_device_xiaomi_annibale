@@ -1,0 +1,5 @@
+bluetooth.device.default_name=Redmi K90
+ro.product.odm.brand=Redmi
+ro.product.odm.model=2510DRK44C
+ro.product.odm.name=annibale
+vendor.usb.product_string=Redmi K90

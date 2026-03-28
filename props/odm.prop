@@ -268,9 +268,7 @@ ro.vendor.sensor.maxbrightness.sec=6750
 ro.vendor.sensor.maxbrightness=6750
 
 # SKU
-bluetooth.device.default_name=POCO F8 Pro
-vendor.usb.product_string=POCO F8 Pro
-ro.product.odm.marketname=POCO F8 Pro
+import /odm/etc/odm_${ro.boot.hwc}.prop
 
 # SRE
 ro.vendor.sre.enable=true
