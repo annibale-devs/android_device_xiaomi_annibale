@@ -1,0 +1,7 @@
+type parts_app, domain;
+typeattribute parts_app mlstrustedsubject;
+
+app_domain(parts_app)
+
+allow parts_app vendor_hal_displayfeature_xiaomi_service:service_manager find;
+binder_call(parts_app, vendor_hal_displayfeature_xiaomi_default)
