@@ -221,7 +221,6 @@ odm/etc/usecaseKvManager.xml
 vendor/etc/audio/sku_sun/adsp_sleep_monitor.conf
 vendor/etc/audio/sku_sun/audio_effects.conf
 vendor/etc/audio/sku_sun/audio_effects.xml
-vendor/etc/audio/sku_sun/audio_effects_config.xml
 vendor/etc/audio/sku_sun/audio_effects_config_stub.xml
 vendor/etc/audio/sku_sun/mixer_paths_sun_mtp.xml
 vendor/etc/audio/sku_sun/resourcemanager_sun_mtp.xml
