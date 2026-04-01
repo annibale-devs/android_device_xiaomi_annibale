@@ -213,21 +213,13 @@ odm/etc/audio/sku_sun/mixer_paths_overlay_dynamic.xml
 odm/etc/audio/sku_sun/mixer_paths_overlay_static.xml
 odm/etc/audio/sku_sun/mixer_paths_sun_mtp.xml
 odm/etc/audio/sku_sun/resourcemanager_sun_mtp.xml
-odm/etc/audio/audio_effects_config.json
 odm/etc/backend_conf.xml
 odm/etc/backend_conf_sia.xml
 odm/etc/sixth_wrapper_cfg.xml
 odm/etc/usecaseKvManager.xml
-vendor/etc/audio/sku_sun/adsp_sleep_monitor.conf
-vendor/etc/audio/sku_sun/audio_effects.conf
-vendor/etc/audio/sku_sun/audio_effects.xml
-vendor/etc/audio/sku_sun/audio_effects_config_stub.xml
-vendor/etc/audio/sku_sun/mixer_paths_sun_mtp.xml
-vendor/etc/audio/sku_sun/resourcemanager_sun_mtp.xml
 vendor/etc/audio_diag.cfg
 vendor/etc/card-defs.xml
 vendor/etc/kvh2xml.xml
-vendor/etc/usecaseKvManager.xml
 
 # Audio dolby
 vendor/bin/hw/vendor.dolby.dms.service
