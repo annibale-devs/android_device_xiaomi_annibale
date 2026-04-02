@@ -56,13 +56,6 @@
             <instance>vibratorfeature</instance>
         </interface>
     </hal>
-    <hal format="aidl">
-        <name>com.android.ozoaudio.notify</name>
-        <interface>
-            <name>IOzoNotify</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl">
         <name>com.fingerprints.extension</name>
         <version>3.0</version>
