@@ -132,8 +132,6 @@ odm/lib64/libsiaalgocal.so
 odm/lib64/libtfacal.so
 odm/lib64/libwindns.so
 odm/lib64/vendor.xiaomi.hardware.mediaeventgatherservice-V1-ndk.so
-vendor/bin/hw/audiohalservice.qti
-vendor/etc/init/audiohalservice_qti.rc
 vendor/etc/models/acd/environment.eai
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai

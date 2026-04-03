@@ -55,6 +55,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     audioadsprpcd \
+    audiohalservice.qti \
     qtiaudiohalvendorextn
 
 PRODUCT_PACKAGES += \

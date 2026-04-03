@@ -240,8 +240,6 @@ blob_fixups: blob_fixups_user_type = {
     'odm/etc/init/vendor.xiaomi.hw.touchfeature-service.rc': blob_fixup()
         .regex_replace(r'service touch-kmsg-init-sh\b[\s\S]*?\n(?=\S|$)', '')
         .regex_replace('seclabel.*?s0', ''),
-    'vendor/etc/init/audiohalservice_qti.rc': blob_fixup()
-        .regex_replace(r'service set_diag_state[\s\S]*?\n(?=\S|$)', ''),
     (
         'vendor/etc/init/hw/init.mi_thermald.rc',
         'vendor/etc/init/hw/init.batterysecret.rc',
