@@ -261,6 +261,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
     DialerResXiaomi \
     FrameworksResCommon \
+    FrameworksResOverlayEsim \
     FrameworksResTarget \
     LineageApertureOverlay \
     LineageSDKOverlay \
