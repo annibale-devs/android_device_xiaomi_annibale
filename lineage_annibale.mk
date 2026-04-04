@@ -25,5 +25,5 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="annibale-user 16 BP2A.250605.031.A3 OS3.0.6.0.WPKMIXM release-keys" \
-    BuildFingerprint="POCO/annibale_global/annibale:16/BP2A.250605.031.A3/OS3.0.6.0.WPKMIXM:user/release-keys"
+    BuildDesc="annibale-user 16 BP2A.250605.031.A3 OS3.0.8.0.WPKMIXM release-keys" \
+    BuildFingerprint="POCO/annibale_global/annibale:16/BP2A.250605.031.A3/OS3.0.8.0.WPKMIXM:user/release-keys"
