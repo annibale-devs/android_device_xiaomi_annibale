@@ -1013,7 +1013,6 @@ vendor/lib64/camera.device-external-impl.so
 vendor/lib64/libAIHDIcon.so
 vendor/lib64/libSEGModel.so
 vendor/lib64/libSNPESample.so
-vendor/lib64/libcamera2ndk_vendor.so
 vendor/lib64/libcameraobserver.so
 vendor/lib64/libcameraopt.so
 vendor/lib64/libjni_fdfeature.so

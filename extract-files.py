@@ -197,15 +197,6 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/com.qti.feature2.fusion.so'
     ): blob_fixup()
         .binary_regex_replace(b'ro.build.product', b'ro.vendor.camera'),
-    'vendor/lib64/libcamera2ndk_vendor.so': blob_fixup()
-        .replace_needed(
-            'android.frameworks.cameraservice.device-V2-ndk',
-            'android.frameworks.cameraservice.device-V3-ndk'
-        )
-        .replace_needed(
-            'android.frameworks.cameraservice.service-V2-ndk',
-            'android.frameworks.cameraservice.service-V3-ndk'
-        ),
     'vendor/lib64/camera.device-external-impl.so': blob_fixup()
         .replace_needed(
             'android.hardware.graphics.common-V5-ndk',
