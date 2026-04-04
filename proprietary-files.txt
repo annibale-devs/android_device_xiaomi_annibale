@@ -1009,7 +1009,6 @@ vendor/etc/vintf/manifest/vendor.xiaomi.hardware.quickcamera.xml
 vendor/etc/decoder.serialized.8750.O3.bin
 vendor/etc/encoder.serialized.8750.O3.bin
 vendor/framework/androidx.camera.extensions.impl.jar
-vendor/lib64/camera.device-external-impl.so
 vendor/lib64/libAIHDIcon.so
 vendor/lib64/libSEGModel.so
 vendor/lib64/libSNPESample.so

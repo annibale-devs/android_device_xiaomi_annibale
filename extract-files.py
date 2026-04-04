@@ -197,11 +197,6 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/com.qti.feature2.fusion.so'
     ): blob_fixup()
         .binary_regex_replace(b'ro.build.product', b'ro.vendor.camera'),
-    'vendor/lib64/camera.device-external-impl.so': blob_fixup()
-        .replace_needed(
-            'android.hardware.graphics.common-V5-ndk',
-            'android.hardware.graphics.common-V6-ndk'
-        ),
     'vendor/lib64/libcameraopt.so': blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
     (
