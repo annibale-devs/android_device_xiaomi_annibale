@@ -1,0 +1,47 @@
+# Audio
+aaudio.hw_burst_min_usec=2000
+aaudio.mmap_exclusive_policy=2
+aaudio.mmap_policy=2
+af.fast_track_multiplier=1
+audio.deep_buffer.media=true
+audio.offload.min.duration.secs=30
+audio.offload.video=true
+audio.sys.mute.latency.factor=2
+audio.sys.noisy.broadcast.delay=500
+audio.sys.offload.pstimeout.secs=3
+audio.sys.routing.latency=0
+ro.vendor.audio.ring.filter=false
+
+# Bluetooth
+bluetooth.device_id.product_id=0x1200
+bluetooth.device_id.vendor_id=0x038F
+bluetooth.profile.a2dp.source.enabled=true
+bluetooth.profile.asha.central.enabled=true
+bluetooth.profile.avrcp.controller.enabled=false
+bluetooth.profile.avrcp.target.enabled=true
+bluetooth.profile.bap.broadcast.assist.enabled=true
+bluetooth.profile.bap.broadcast.source.enabled=true
+bluetooth.profile.bap.unicast.client.enabled=true
+bluetooth.profile.bas.client.enabled=true
+bluetooth.profile.ccp.server.enabled=true
+bluetooth.profile.csip.set_coordinator.enabled=true
+bluetooth.profile.gatt.enabled=true
+bluetooth.profile.hap.client.enabled=true
+bluetooth.profile.hfp.ag.enabled=true
+bluetooth.profile.hid.device.enabled=true
+bluetooth.profile.hid.host.enabled=true
+bluetooth.profile.map.server.enabled=true
+bluetooth.profile.mcp.server.enabled=true
+bluetooth.profile.opp.enabled=true
+bluetooth.profile.pan.nap.enabled=true
+bluetooth.profile.pan.panu.enabled=true
+bluetooth.profile.pbap.server.enabled=true
+bluetooth.profile.vcp.controller.enabled=true
+persist.vendor.qcom.bluetooth.aptx_adaptive_le.enabled=true
+persist.vendor.qcom.bluetooth.aptxadaptiver2_2_support=true
+persist.vendor.qcom.bluetooth.pbap_pse_dynamic_version_upgrade=true
+
+# RKPD
+remote_provisioning.enable_rkpd=true
+remote_provisioning.hostname=remoteprovisioning.googleapis.com
+remote_provisioning.strongbox.rkp_only=true

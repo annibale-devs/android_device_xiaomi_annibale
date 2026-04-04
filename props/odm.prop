@@ -86,21 +86,16 @@ vendor.audio.usb.multi.ch.device=false
 vendor.audio.usb.multi.ch.play=true
 vendor.audio.useXiaomiSpatializer=true
 
-# Bluetooth
-ro.bluetooth.finder.supported=true
-
 # Camera
 persist.sys.miui.camera.cameramind.supported=true
 persist.sys.miui.camera.quickcamera.supported=true
 persist.vendor.camera.cameramind.supported=true
 
 # Camera (Xiaomi)
-debug.config.video.hevchdr10.encode.support=false
-debug.config.video.hevchdr10.decode.support=false
+debug.config.video.hevchdr10.encode.support=true
 debug.config.video.p3.decode.support=true
 debug.config.video.p3.encode.support=true
 ro.camera.disableHeicUltraHDR=true
-ro.camera.disableJpegR=true
 ro.camerax.extensions.enabled=true
 ro.product.camera.livephoto.support=3
 ro.vendor.dynamiccamera.ability_level=2
