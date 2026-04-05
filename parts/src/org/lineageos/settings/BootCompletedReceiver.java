@@ -34,6 +34,8 @@ import android.util.Log;
 import android.view.Display;
 import android.view.Display.HdrCapabilities;
 
+import vendor.xiaomi.hw.touchfeature.ITouchFeature;
+
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.display.ColorModeService;
 import org.lineageos.settings.refreshrate.RefreshUtils;
