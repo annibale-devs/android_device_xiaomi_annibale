@@ -92,9 +92,6 @@ BOARD_BOOTCONFIG := \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.vendor.qspa=true
 
-BOARD_BOOTCONFIG += \
-    androidboot.selinux=permissive
-
 # Kernel prebuilt
 PREBUILT_PATH := device/xiaomi/annibale-kernel
 TARGET_NO_KERNEL_OVERRIDE := true
@@ -183,6 +180,7 @@ VENDOR_SECURITY_PATCH := 2025-11-01
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

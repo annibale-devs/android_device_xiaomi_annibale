@@ -1,0 +1,14 @@
+binder_use(vendor_hal_keymint_strongbox)
+hwbinder_use(vendor_hal_keymint_strongbox)
+
+get_prop(vendor_hal_keymint_strongbox, hwservicemanager_prop)
+get_prop(vendor_hal_keymint_strongbox, boot_status_prop)
+
+allow vendor_hal_keymint_strongbox self:capability2 block_suspend;
+allow vendor_hal_keymint_strongbox self:cap2_userns block_suspend;
+allow vendor_hal_keymint_strongbox sysfs_wake_lock:file rw_file_perms;
+allow vendor_hal_keymint_strongbox system_suspend_server:binder { call transfer };
+allow vendor_hal_keymint_strongbox system_suspend_server:fd *;
+allow vendor_hal_keymint_strongbox system_suspend_hwservice:hwservice_manager find;
+allow vendor_hal_keymint_strongbox hidl_manager_hwservice:hwservice_manager find;
+allow vendor_hal_keymint_strongbox hal_system_suspend_service:service_manager find;
