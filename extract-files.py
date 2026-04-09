@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+import os
 from extract_utils.file import File
 from extract_utils.fixups_blob import (
     BlobFixupCtx,
@@ -24,6 +25,10 @@ from extract_utils.tools import (
 )
 from extract_utils.utils import (
     run_cmd,
+)
+from extract_utils.utils import (
+    Color,
+    color_print,
 )
 
 namespace_imports = [
@@ -51,7 +56,42 @@ lib_fixups: lib_fixups_user_type = {
     ): lib_fixup_vendor_suffix,
 }
 
+def blob_fixup_split_file(
+    ctx: 'BlobFixupCtx',
+    file: 'File',
+    file_path: str,
+    *args,
+    **kwargs,
+):
+    # Split the file into parts
+    part_size = 51380224 # 49 MiB
+    part_number = 0
+    with open(file_path, 'rb') as f:
+        while chunk := f.read(part_size):
+            part_file_name = f"{file_path}.part{part_number:02d}"
+            with open(part_file_name, 'wb') as part_file:
+                part_file.write(chunk)
+            part_number += 1
+    color_print(f'{file.dst}: split into {part_number} parts', color=Color.GREEN)
+
+    # Add the file to .gitignore
+    gitignore_path = os.path.join(module.vendor_path, '.gitignore')
+    with open(gitignore_path, 'a+') as gitignore_file:
+        gitignore_file.seek(0)  # Move to the start of the file
+        existing_entries = gitignore_file.read().splitlines()
+        if f'proprietary/{file.dst}' not in existing_entries:
+            gitignore_file.write(f'proprietary/{file.dst}\n')
+            color_print(f'{file.dst}: added to .gitignore', color=Color.GREEN)
+
 blob_fixups: blob_fixups_user_type = {
+    (
+        'odm/lib64/libarcsoft_raw_sr.so',
+        'odm/lib64/libarcsoft_turbo_fusion_mfnr.so',
+        'odm/lib64/libarcsoft_turbo_hdr_raw.so',
+        'odm/lib64/libarcsoft_turbo_fusion_raw_super_night.so',
+        'odm/lib64/libarcsoft_dark_vision.so'
+    ): blob_fixup()
+        .call(blob_fixup_split_file),
     'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
         .add_needed('libgui_shim.so'),
     'system_ext/lib64/libwfdnative.so': blob_fixup()
