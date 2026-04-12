@@ -247,13 +247,7 @@ blob_fixups: blob_fixups_user_type = {
             'android.hardware.biometrics.fingerprint-V4-ndk.so'
         ),
     'odm/etc/init/vendor.xiaomi.hw.touchfeature-service.rc': blob_fixup()
-        .regex_replace(r'service touch-kmsg-init-sh\b[\s\S]*?\n(?=\S|$)', '')
-        .regex_replace('seclabel.*?s0', ''),
-    (
-        'vendor/etc/init/hw/init.mi_thermald.rc',
-        'vendor/etc/init/hw/init.batterysecret.rc',
-    ): blob_fixup()
-        .regex_replace('seclabel.*?s0', ''),
+        .regex_replace(r'service touch-kmsg-init-sh\b[\s\S]*?\n(?=\S|$)', ''),
     (
         'odm/bin/hw/vendor.qti.camera.provider-service_64',
         'vendor/bin/hw/vendor.qti.hardware.display.composer-service',
