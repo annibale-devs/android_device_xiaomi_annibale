@@ -276,6 +276,7 @@ PRODUCT_PACKAGES += \
     SystemUIResCommon \
     TelecommResCommon \
     TelephonyResCommon \
+    WifiResCommon \
     WifiResTarget \
     WifiResTarget_spf
 
