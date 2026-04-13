@@ -213,6 +213,14 @@ blob_fixups: blob_fixups_user_type = {
             'libtinyxml2-v34.so'
         ),
     (
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.gainmap.so',
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.jpegrAggr.so'
+    ): blob_fixup()
+        .replace_needed(
+            'libultrahdr.so',
+            'libultrahdr_annibale.so'
+        ),
+    (
         'vendor/bin/wfdhdcphalservice',
         'vendor/bin/wfdvndservice'
     ): blob_fixup()
@@ -261,6 +269,15 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'android.hardware.graphics.common-V5-ndk.so',
             'android.hardware.graphics.common-V7-ndk.so'
+        ),
+    'vendor/lib64/libultrahdr_annibale.so': blob_fixup()
+        .replace_needed(
+            'libjpegdecoder.so',
+            'libjpegdecoder_annibale.so'
+        )
+        .replace_needed(
+            'libjpegencoder.so',
+            'libjpegencoder_annibale.so'
         ),
     'vendor/lib64/libwfdmmsrc_proprietary.so': blob_fixup()
         .replace_needed(

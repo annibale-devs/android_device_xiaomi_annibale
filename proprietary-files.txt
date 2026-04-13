@@ -474,10 +474,10 @@ odm/lib64/camera/plugins/com.xiaomi.plugin.ecdsnapshotdet.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.edof.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.filter.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.frontbokeh.so
-odm/lib64/camera/plugins/com.xiaomi.plugin.gainmap.so;DISABLE_CHECKELF
+odm/lib64/camera/plugins/com.xiaomi.plugin.gainmap.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.gainmapPostProc.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.heifedit.so
-odm/lib64/camera/plugins/com.xiaomi.plugin.jpegrAggr.so;DISABLE_CHECKELF
+odm/lib64/camera/plugins/com.xiaomi.plugin.jpegrAggr.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.ldc.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.memcpy.so
 odm/lib64/camera/plugins/com.xiaomi.plugin.mialgoallinone.so
@@ -1020,6 +1020,8 @@ vendor/lib64/libSNPESample.so
 vendor/lib64/libcameraobserver.so
 vendor/lib64/libcameraopt.so
 vendor/lib64/libjni_fdfeature.so
+vendor/lib64/libjpegdecoder.so:vendor/lib64/libjpegdecoder_annibale.so;FIX_SONAME
+vendor/lib64/libjpegencoder.so:vendor/lib64/libjpegencoder_annibale.so;FIX_SONAME
 vendor/lib64/libmialgo.so
 vendor/lib64/libnova.so
 vendor/lib64/liboemaids_vendor.so
@@ -1033,6 +1035,7 @@ vendor/lib64/libstreamprocessor.so
 vendor/lib64/libsynx.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libubwcp.so
+vendor/lib64/libultrahdr.so:vendor/lib64/libultrahdr_annibale.so;FIX_SONAME
 vendor/lib64/vendor.xiaomi.hardware.aidl.intentaware-V1-ndk_platform.so
 vendor/lib64/vendor.xiaomi.hardware.aon-V1-ndk.so
 vendor/lib64/vendor.xiaomi.hardware.camera.injection-V1-ndk.so
