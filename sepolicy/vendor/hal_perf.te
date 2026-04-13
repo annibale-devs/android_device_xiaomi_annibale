@@ -1,4 +1,5 @@
-allow vendor_hal_perf_default hal_fingerprint_default:dir { read search };
+allow vendor_hal_perf_default hal_fingerprint_default:dir r_dir_perms;
+allow vendor_hal_perf_default hal_fingerprint_default:file rw_file_perms;
 allow vendor_hal_perf_default sysfs:file w_file_perms;
 allow vendor_hal_perf_default sysfs_thermal:file w_file_perms;
 allow vendor_hal_perf_default thermal_data_file:dir { getattr open read search watch };
