@@ -100,7 +100,6 @@ persist.vendor.qti.btadvaudio.target.support.xpan=true
 ro.bluetooth.a2dp_offload.supported=true
 
 # Camera
-ro.vendor.camera=generic_arm64
 ro.camera.disableHeicUltraHDR=true
 ro.camera.enableCamera1MaxZsl=1
 ro.camera.resultFmqSize=4194304
