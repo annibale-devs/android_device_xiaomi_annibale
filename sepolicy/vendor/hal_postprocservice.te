@@ -1,0 +1,16 @@
+type hal_postprocservice_service, hal_service_type, protected_service, service_manager_type;
+
+allow hal_postprocservice platform_app:binder { call transfer };
+allow hal_postprocservice platform_app:fd *;
+allow hal_postprocservice priv_app:binder { call transfer };
+allow hal_postprocservice priv_app:fd *;
+allow hal_postprocservice system_app:binder { call transfer };
+allow hal_postprocservice system_app:fd *;
+allow hal_postprocservice system_server:binder { call transfer };
+allow hal_postprocservice system_server:fd *;
+allow hal_postprocservice_client hal_postprocservice_server:binder { call transfer };
+allow hal_postprocservice_client hal_postprocservice_server:fd *;
+allow hal_postprocservice_client hal_postprocservice_service:service_manager find;
+allow hal_postprocservice_server hal_postprocservice_client:binder { call transfer };
+allow hal_postprocservice_server hal_postprocservice_client:fd *;
+allow hal_postprocservice_server hal_postprocservice_service:service_manager { add find };

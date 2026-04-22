@@ -3,6 +3,7 @@ vendor.xiaomi.hardware.aidlbgservice.IBGService/default u:object_r:hal_aidlbgser
 vendor.xiaomi.hardware.aon.IAlwaysOn/miaonservicehal u:object_r:hal_camera_aon_service:s0
 vendor.xiaomi.hardware.camera.injection.ICameraInjectionService/default u:object_r:hal_dynamic_camera_service:s0
 vendor.xiaomi.hardware.camera.synthetic.IVirtualCameraRegistrar/default u:object_r:hal_dynamic_camera_service:s0
+vendor.xiaomi.hardware.postprocservice.IPostProcService/default u:object_r:hal_postprocservice_service:s0
 vendor.xiaomi.hardware.quickcamera.IQuickCameraService/default u:object_r:hal_quickcamera_service:s0
 vendor.xiaomi.sensor.camera.IMiCam/default u:object_r:vendor_hal_misensor_camera_service:s0
 
