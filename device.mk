@@ -115,19 +115,6 @@ PRODUCT_COPY_FILES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.mapper@4.0-impl-qti-display \
-    vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.demura-service \
-    vendor.qti.hardware.display.snapalloc-impl
-
-PRODUCT_PACKAGES += \
-    mapper.qti
-
-PRODUCT_PACKAGES += \
-    init.qti.display_boot.rc \
-    init.qti.display_boot.sh
-
-PRODUCT_PACKAGES += \
     android.hardware.graphics.composer3-V3-ndk.vendor \
     vendor.qti.hardware.display.aiqe-V2-ndk.vendor  \
     vendor.qti.hardware.display.config-V12-ndk.vendor  \
