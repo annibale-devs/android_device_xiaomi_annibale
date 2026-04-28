@@ -120,6 +120,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.config-V12-ndk.vendor  \
     vendor.qti.hardware.display.composer3-V1-ndk.vendor
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/display/display_id_4630947238302509459.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947238302509459.xml
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey

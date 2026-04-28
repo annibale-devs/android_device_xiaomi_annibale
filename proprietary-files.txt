@@ -2568,10 +2568,6 @@ odm/etc/mdss_dsi_p11_42_02_0b_dsc_cmd_mi.xml
 odm/etc/mdss_dsi_p11_42_0d_0a_dsc_cmd_mi.xml
 odm/etc/mdss_dsi_p11_42_0d_0a_p10_dsc_cmd_mi.xml
 vendor/etc/display/xiaomi_o1_38_0c_0b_cmd_mode_dsc_dsi_panel.json
-vendor/etc/displayconfig/display_id_4630946916234099603.xml
-vendor/etc/displayconfig/display_id_4630947039571902850.xml
-vendor/etc/displayconfig/display_id_4630947039571902851.xml
-vendor/etc/displayconfig/display_id_4630947075271898515.xml
 
 # Display configs
 vendor/etc/display/DPU1010.xml
