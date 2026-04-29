@@ -56,6 +56,31 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audioadsprpcd \
     audiohalservice.qti \
+    libagm_compress_plugin \
+    libagm_mixer_plugin \
+    libagm_pcm_plugin \
+    libagmipcservice \
+    libaudiochargerlistener \
+    libbatterylistener \
+    libbundleaidl \
+    libcustomva_intf \
+    libdownmixaidl \
+    libdynamicsprocessingaidl \
+    libfmpal \
+    libhfp_pal \
+    libhotword_intf \
+    libloudnessenhanceraidl \
+    libpaleventnotifier \
+    libpalipcservice \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libreverbaidl \
+    libsndcardparser \
+    libsoundtriggerhal.qti \
+    libvisualizeraidl \
+    libvolumelistener \
+    libvui_intf \
     qtiaudiohalvendorextn
 
 PRODUCT_PACKAGES += \
@@ -95,6 +120,11 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl
+
+PRODUCT_PACKAGES += \
+    lib_bt_aptx \
+    lib_bt_ble \
+    lib_bt_bundle
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
