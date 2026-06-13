@@ -208,7 +208,7 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed(
             'libtinyxml2.so',
-            'libtinyxml2-v36.so'
+            'libtinyxml2-v34.so'
         ),
     (
         'odm/lib64/camera/plugins/com.xiaomi.plugin.gainmap.so',
