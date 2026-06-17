@@ -1,3 +1,4 @@
+
 //
 // SPDX-FileCopyrightText: The LineageOS Project
 // SPDX-License-Identifier: Apache-2.0
@@ -23,4 +24,5 @@ interface ITouchFeature {
     int registerCallback(int type, ITouchFeatureCallback callback, String name);
     int unregisterCallback(int type, ITouchFeatureCallback callback, String name);
     String setModePackageName(int type, int mode, String packageName);
+    void setTouchMode(int touchId, int mode, int value);
 }
