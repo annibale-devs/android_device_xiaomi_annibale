@@ -2251,6 +2251,18 @@ odm/firmware/CAMERA_ICP_1.mbn
 odm/firmware/CAMERA_ICP_1.mdt
 odm/firmware/CAMERA_ICP_170.elf
 
+# Camera from CN OS3.0.9.0.WPKCNXM
+odm/lib64/camera/aon_front_ii_1.pb;SYMLINK=vendor/lib64/camera/aon_front_ii_1.pb|b9f190dca8705933e1a04e249e7a79585514fcfb
+odm/lib64/camera/aon_rear_ii_2.pb;SYMLINK=vendor/lib64/camera/aon_rear_ii_2.pb|a9de223f69dbc23a34f7d9fbf471c8a37c2d6f7b
+odm/lib64/camera/com.qti.sensormodule.annibale_aac_ov08f_ultra_ii.bin|524a53cbc39796b906ee7f1f926513e7546475f5
+odm/lib64/camera/com.qti.sensormodule.annibale_aac_ov20b40_front_ii.bin|6567e656c9a2dbc12c4768bba4fea7368c7fafc8
+odm/lib64/camera/com.qti.sensormodule.annibale_ofilm_ovx8000_wide_ii.bin|a67fbaabbf801dd3fbdd5af174d953cbaa2212ba
+odm/lib64/camera/com.qti.sensormodule.annibale_sunny_ov50m_tele3x_ii.bin|5ce27db4b62661870862bf4c64f79ae9ac6bfff4
+odm/lib64/camera/com.qti.tuned.annibale_aac_ov08f_ultra_ii.bin|f245c501bda852cf3fdfa65bd1713624a6295cea
+odm/lib64/camera/com.qti.tuned.annibale_aac_ov20b40_front_ii.bin|b522641a6fb0b2443e6328a898ff58bab38d756a
+odm/lib64/camera/com.qti.tuned.annibale_ofilm_ovx8000_wide_ii.bin|c9cd4d2d79ea3fdded9d57498be01a1cdde1637f
+odm/lib64/camera/com.qti.tuned.annibale_sunny_ov50m_tele3x_ii.bin|d50286862952cb189ed0efbd3e880a8fa88aa13c
+
 # CDSP
 vendor/bin/cdsprpcd
 vendor/bin/loadalgo
