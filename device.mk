@@ -163,6 +163,7 @@ PRODUCT_PACKAGES += \
 
 # Euicc
 PRODUCT_PACKAGES += \
+    EsimSwitcherXiaomi \
     XiaomiEuicc
 
 PRODUCT_COPY_FILES += \
