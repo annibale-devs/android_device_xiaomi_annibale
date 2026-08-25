@@ -331,6 +331,67 @@ blob_fixups: blob_fixups_user_type = {
             'libultrahdr.so',
             'libultrahdr_annibale.so'
         ),
+
+    'odm/lib64/hw/camera.qcom.so': blob_fixup()
+        .replace_needed(
+            'android.hardware.sensors-V2-ndk.so',
+            'android.hardware.sensors-V3-ndk.so'
+        ),
+
+    (
+        'odm/lib64/hw/fingerprint.qcom_us.default.so',
+        'odm/lib64/libqc_hal.so'
+    ): blob_fixup()
+        .replace_needed(
+            'android.hardware.biometrics.fingerprint-V5-ndk.so',
+            'android.hardware.biometrics.fingerprint-V4-ndk.so'
+        ),
+
+    (
+        'odm/lib64/libAncHumanPreviewBokeh.so',
+        'odm/lib64/libMiEmojiEffect.so',
+        'odm/lib64/libMiPhotoFilter.so',
+        'odm/lib64/libMiVideoFilter.so',
+        'odm/lib64/libarcsoft_beautyshot.so',
+        'odm/lib64/libwa_widelens_undistort.so'
+    ): blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_lockPlanes')
+        .clear_symbol_version('AHardwareBuffer_release')
+        .clear_symbol_version('AHardwareBuffer_unlock')
+        .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_isSupported'),
+
+    (
+        'odm/lib64/libaudioroute_ext.so',
+        'vendor/lib64/libagm.so',
+        'vendor/lib64/libar-pal.so',
+        'vendor/lib64/libmcs.so',
+        'vendor/lib64/libmikaraoke.so',
+        'vendor/lib64/libtiantongpal.so',
+    ): blob_fixup()
+        .replace_needed(
+            'libaudioroute.so',
+            'libaudioroute_annibale.so'
+        ),
+
+    (
+        'odm/lib64/libcom.xiaomi.grallocutils.so',
+        'odm/lib64/libmicamera_hal_core.so',
+    ): blob_fixup()
+        .replace_needed(
+            'libui.so',
+            'libui-xiaomi.so'
+        ),
+
+    'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
+        .add_needed('libgui_shim.so'),
+
+    'system_ext/lib64/libwfdnative.so': blob_fixup()
+        .add_needed('libbinder_shim.so')
+        .add_needed('libinput_shim.so'),
+
     (
         'vendor/bin/wfdhdcphalservice',
         'vendor/bin/wfdvndservice'
@@ -377,8 +438,12 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libtensorflowlite_c.so',
             'libtensorflowlite_c_vendor.so',
-    ),
-    'vendor/lib64/libqcodec2_core.so': blob_fixup()
+        ),
+
+    (
+        'vendor/lib64/libqcodec2_core.so',
+        'vendor/lib64/libui-xiaomi.so',
+    ): blob_fixup()
         .replace_needed(
             'android.hardware.graphics.common-V5-ndk.so',
             'android.hardware.graphics.common-V7-ndk.so'
